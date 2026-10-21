@@ -28,3 +28,13 @@
   .side-column{order:1;grid-template-columns:repeat(2,minmax(0,1fr))}
   .history-card{order:2}
 }
+
+
+@media(max-width:1280px){
+  .dashboard{grid-template-columns:minmax(0,1fr)}
+  .main-column{display:contents}
+  .tasks-card{order:0}
+  .side-column{order:1;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .history-card{order:2}
+}
+.dashboard,.main-column,.side-column{min-width:0}
