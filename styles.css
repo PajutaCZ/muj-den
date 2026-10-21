@@ -90,6 +90,19 @@
 .timed-task-row span{color:#35463b;font-size:12px;line-height:1.45;overflow-wrap:anywhere}
 .timed-task-empty{margin:0;padding:12px;border-radius:9px;background:#e9eee7;color:#7f897e;font-size:11px;line-height:1.55}
 .task-date+.task-date{margin-left:6px}
+/* One mobile-friendly hourly rail for recurring events and today's timed tasks. */
+.timeline{display:grid;gap:0;padding:4px 0 8px}
+.timeline-hour{position:relative;display:grid;grid-template-columns:48px 16px minmax(0,1fr);gap:9px;min-height:54px;padding:5px 0 9px}
+.timeline-hour::before{content:"";position:absolute;z-index:0;top:0;bottom:0;left:63px;width:2px;background:#e3e9e2}
+.timeline-hour-label{grid-column:1;grid-row:1;align-self:start;padding-top:2px;color:#858a80;font-size:10px;font-variant-numeric:tabular-nums}
+.timeline-hour-mark{grid-column:2;grid-row:1;z-index:1;width:10px;height:10px;margin:3px auto 0;border:2px solid #9cac9e;border-radius:50%;background:#fffefa}
+.timeline-hour-content{grid-column:3;grid-row:1;display:grid;align-content:start;gap:5px;min-width:0}
+.timeline-item{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:start;gap:8px;padding:8px 10px;border-radius:9px;background:#f0f3ed;min-width:0}
+.timeline-item.is-task{background:#f4f5f1;border:1px solid #e5e9e2}
+.timeline-item-time{padding-top:1px;color:#527765;font-size:10px;font-weight:750;font-variant-numeric:tabular-nums;white-space:nowrap}
+.timeline-item-title{color:#34483a;font-size:12px;font-weight:620;line-height:1.4;overflow-wrap:anywhere}
+.timeline-item-kind{padding-top:2px;color:#92958c;font-size:8px;font-weight:700;letter-spacing:.45px;white-space:nowrap}
+.timeline-empty{padding:14px;margin:0;border-radius:10px;background:#f4f3ed;color:var(--muted);font-size:12px;line-height:1.5}
 @media(max-width:760px){
  .app-shell{padding-left:18px;padding-right:18px}
  .topbar{min-height:68px;gap:8px}
@@ -97,6 +110,12 @@
  .today-date{font-size:16px}
  .schedule-card{margin:18px 0 16px;padding:19px 17px}
  .schedule-head h1{font-size:21px}
+ .timeline-hour{grid-template-columns:42px 14px minmax(0,1fr);gap:7px;min-height:53px;padding-bottom:8px}
+ .timeline-hour::before{left:55px}
+ .timeline-item{grid-template-columns:auto minmax(0,1fr) auto;gap:6px;padding:8px}
+ .timeline-item-time{font-size:9px}
+ .timeline-item-title{font-size:11px}
+ .timeline-item-kind{font-size:7px}
  .timeline-event{grid-template-columns:65px 16px minmax(0,1fr);gap:8px;min-height:48px}
  .timeline-event strong{padding:11px 12px;font-size:12px}
  .timeline-time{font-size:11px}
