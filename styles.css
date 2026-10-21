@@ -38,3 +38,12 @@
   .history-card{order:2}
 }
 .dashboard,.main-column,.side-column{min-width:0}
+
+
+/* Keep the task entry in its own full-width row on every viewport. */
+.dashboard{grid-template-columns:minmax(0,1fr)}
+.main-column{display:contents}
+.tasks-card{order:0}
+.side-column{order:1;grid-template-columns:repeat(3,minmax(0,1fr));min-width:0}
+.quote-card{grid-column:span 3}
+.history-card{order:2}
