@@ -183,3 +183,17 @@
  .plan-row,.timeline-now{grid-template-columns:var(--plan-time-width) 14px minmax(0,1fr) auto;gap:5px}
  .plan-time{font-size:9px}
 }
+
+
+/* Plan timeline: axis markers share one center line and sit above its connector. */
+.timeline{--plan-axis-gutter:15px;--plan-axis-x:5px;padding-left:var(--plan-axis-gutter)}
+.timeline::before{left:var(--plan-axis-x);z-index:2}
+.plan-row{z-index:3;grid-template-columns:minmax(0,var(--plan-time-width)) minmax(0,1fr) 16px auto;gap:6px;padding:5px 10px}
+.plan-time{font-size:12px}
+.plan-title{grid-column:2;font-size:13px}
+.plan-kind{grid-column:4}
+.plan-axis-dot{position:absolute;left:calc(-1 * var(--plan-axis-gutter) + var(--plan-axis-x) - 5px);top:50%;transform:translateY(-50%);grid-column:auto;grid-row:auto;justify-self:auto;z-index:4}
+.timeline-task-check{grid-column:3;width:15px;height:15px;border-width:1.25px}
+.timeline-now{z-index:4;display:block;height:16px;margin-left:calc(-1 * var(--plan-axis-gutter))}
+.timeline-now-dot{position:absolute;left:calc(var(--plan-axis-x) - 5px);top:3px;z-index:5}
+@media(max-width:370px){.plan-row{gap:5px;padding-right:8px;padding-left:8px}.plan-time{font-size:12px}.plan-title{font-size:13px}}
