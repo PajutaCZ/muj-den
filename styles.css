@@ -197,3 +197,14 @@
 .timeline-now{z-index:4;display:block;height:16px;margin-left:calc(-1 * var(--plan-axis-gutter))}
 .timeline-now-dot{position:absolute;left:calc(var(--plan-axis-x) - 5px);top:3px;z-index:5}
 @media(max-width:370px){.plan-row{gap:5px;padding-right:8px;padding-left:8px}.plan-time{font-size:12px}.plan-title{font-size:13px}}
+
+/* Verze aplikace a upozornění na novou verzi. */
+.avatar{position:relative}
+.avatar.update-available{background:#f5e3df;color:#b94e45;box-shadow:0 0 0 2px #c95f5430}
+.avatar.update-available::after{position:absolute;top:1px;right:1px;width:8px;height:8px;border:1.5px solid var(--bg);border-radius:50%;background:#c94f45;content:""}
+.version-info{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:16px;padding:13px;border:1px solid var(--line);border-radius:10px;background:#f6f5ef}
+.version-info .eyebrow{margin:0 0 4px;font-size:9px}
+.version-info strong{font-size:12px;color:var(--ink)}
+.version-status{font-size:10px;line-height:1.4;text-align:right;color:#85877e}
+.version-status.is-current{color:#527765}
+.version-status.is-update{color:#b94e45;font-weight:700}
