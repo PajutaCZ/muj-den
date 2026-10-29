@@ -275,3 +275,9 @@
   .task-heading-line .count{min-width:25px;height:25px;font-size:11px}
   .tasks-card .task-section-heading .text-button{font-size:10px}
 }
+
+/* Ruční aktualizace aplikace z nastavení. */
+.update-app-button{display:block;width:100%;margin-top:10px;padding:11px 14px;border:0;border-radius:9px;background:var(--green);color:#fff;font:650 12px var(--sans);cursor:pointer}
+.update-app-button:hover{background:var(--green-dark)}
+.update-app-button:disabled{opacity:.65;cursor:wait}
+.update-app-button[hidden]{display:none!important}
