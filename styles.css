@@ -312,3 +312,7 @@
  .task-item-actions .task-date{font-size:9px;margin-right:2px}
  .task-item-actions .edit-task,.task-item-actions .delete-task{flex-basis:23px;min-width:23px;width:23px;height:23px}
 }
+
+/* Pohodlné ovládání úkolů na dotykových displejích. */
+.task-item-actions .edit-task,.task-item-actions .delete-task{width:36px;min-width:36px;height:36px;padding:0;border-radius:50%;font-size:18px;touch-action:manipulation}
+@media(max-width:520px){.task-item-actions{max-width:136px;flex-wrap:nowrap;gap:2px}.task-item-actions .task-date{margin-right:2px}}
