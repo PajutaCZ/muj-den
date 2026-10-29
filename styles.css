@@ -407,3 +407,37 @@
  .movement-copy small{font-size:11px}
 }
 @media(max-width:360px){.water-main{grid-template-columns:minmax(0,1fr) 104px}.water-add-circle{width:104px;height:104px}.water-glass{width:54px;height:54px}.water-total strong{font-size:22px}.water-goal{font-size:12px}}
+
+/* Barevný smajlík pitného režimu podle naplnění cíle. */
+.water-mood-icon{display:block;flex:0 0 42px;width:42px;height:42px}
+.water-mood-icon .mood-face{stroke:none}
+.water-mood-icon .mood-eye{fill:#314b3e}
+.water-mood-icon .mood-mouth{fill:none;stroke:#314b3e;stroke-width:3.5;stroke-linecap:round}
+.water-mood-icon[data-level=red] .mood-face{fill:#e56f65}
+.water-mood-icon[data-level=orange] .mood-face{fill:#f2a45f}
+.water-mood-icon[data-level=yellow] .mood-face{fill:#f1d16b}
+.water-mood-icon[data-level=green] .mood-face{fill:#83b68a}
+.water-mood[data-level=red] strong{color:#c85b53}
+.water-mood[data-level=orange] strong{color:#c47b35}
+.water-mood[data-level=yellow] strong{color:#a88723}
+.water-mood[data-level=green] strong{color:#4c8059}
+/* Výběr jednoho z deseti piktogramů cviků. */
+.movement-modal{width:min(760px,calc(100% - 24px));max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain}
+.picker-label{margin:14px 0 8px;color:var(--muted);font-size:12px;font-weight:650}
+.exercise-icon-picker{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:15px}
+.exercise-icon-option{display:flex;min-width:0;min-height:122px;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 5px;border:1px solid var(--line);border-radius:12px;background:#fffefa;color:var(--ink);font:inherit;text-align:center;cursor:pointer}
+.exercise-icon-option.selected{border:2px solid var(--green);background:#f1f5f1;box-shadow:0 0 0 2px #527a6812}
+.exercise-icon-option strong{font-size:11px;line-height:1.2}
+.exercise-icon-option small{color:var(--muted);font-size:10px;line-height:1.15}
+.picker-pictogram{width:100%;height:58px;overflow:visible}
+.picker-pictogram .exercise-ground{fill:none;stroke:#d7ded6;stroke-width:4;stroke-linecap:round}
+.picker-pictogram .exercise-pose{fill:none;stroke:#315c4f;stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.picker-pictogram .exercise-pose circle{fill:#315c4f;stroke:none}
+.movement-icon .exercise-ground{fill:none;stroke:#d7ded6;stroke-width:4;stroke-linecap:round}
+.movement-icon .exercise-pose{fill:none;stroke:var(--green);stroke-width:11;stroke-linecap:round;stroke-linejoin:round}
+.movement-icon .exercise-pose circle{fill:var(--green);stroke:none}
+.install-info{margin-top:18px;padding:13px 14px;border:1px solid var(--line);border-radius:11px;background:#f7f7f2}
+.install-info strong{font-size:12px}
+.install-info p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+.install-info a{color:var(--green-dark);font-weight:650}
+@media(max-width:600px){.exercise-icon-picker{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.exercise-icon-option{min-height:108px}.picker-pictogram{height:52px}.movement-modal{padding:20px 16px}}
