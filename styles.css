@@ -460,3 +460,14 @@
 .exercise-icon-option{min-height:128px}
 @media(max-width:600px){.water-main{grid-template-columns:minmax(0,1fr) 116px;gap:10px}.water-add-circle{width:116px;height:116px}.water-glass{width:104px}.water-dose-row{gap:8px}.water-dose input{width:48px;height:34px}.water-mood-icon{flex-basis:40px;width:40px;height:40px}.movement-icon{flex-basis:50px;width:50px}}
 @media(max-width:360px){.water-main{grid-template-columns:minmax(0,1fr) 98px}.water-add-circle{width:98px;height:98px}.water-glass{width:90px}}
+
+/* Verze 37: zelené záhlaví, čitelné množství vody a stabilní smajlík. */
+.brand{color:var(--green-dark)}
+.brand-mark{display:block;flex:0 0 36px;width:36px;height:36px;border-radius:9px;object-fit:cover;background:none}
+.water-dose input{width:66px;min-width:66px;box-sizing:border-box;appearance:textfield;-moz-appearance:textfield}
+.water-dose input::-webkit-inner-spin-button,.water-dose input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.water-mood{width:220px;min-width:220px;justify-content:flex-start;gap:9px}
+.water-mood>div{width:165px;min-width:0;min-height:42px;align-content:center}
+.water-mood-icon{flex:0 0 46px;width:46px;height:46px;object-fit:cover;border-radius:50%;mix-blend-mode:multiply}
+@media(max-width:600px){.brand-mark{flex-basis:34px;width:34px;height:34px}.water-dose input{width:64px;min-width:64px}.water-mood{width:180px;min-width:180px;gap:7px}.water-mood>div{width:133px;min-height:40px}.water-mood-icon{flex-basis:42px;width:42px;height:42px}}
+@media(max-width:360px){.water-mood{width:172px;min-width:172px}.water-mood>div{width:126px}}

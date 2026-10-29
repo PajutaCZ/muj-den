@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="32" fill="#527765"/><text x="64" y="91" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="88">m.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#648971"/><stop offset="1" stop-color="#466d59"/></linearGradient>
+ <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#203d31" flood-opacity=".18"/></filter>
+</defs>
+<rect width="128" height="128" rx="30" fill="url(#g)"/>
+<g filter="url(#s)">
+ <rect x="20" y="24" width="67" height="60" rx="10" fill="#fffdf7"/>
+ <path d="M40 17v12m27-12v12" stroke="#fffdf7" stroke-width="7" stroke-linecap="round"/>
+ <path d="M40 24v8m27-8v8" stroke="#456d58" stroke-width="3" stroke-linecap="round"/>
+ <rect x="27" y="41" width="14" height="12" rx="2.5" fill="#d4ddd2"/>
+ <rect x="45" y="41" width="14" height="12" rx="2.5" fill="#d4ddd2"/>
+ <rect x="63" y="41" width="16" height="14" rx="3" fill="#527765"/>
+ <path d="m66 48 4 4 7-8" fill="none" stroke="#263e32" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="27" y="58" width="14" height="12" rx="2.5" fill="#d4ddd2"/>
+ <rect x="45" y="58" width="14" height="12" rx="2.5" fill="#d4ddd2"/>
+ <circle cx="84" cy="83" r="25" fill="#fffdf7" stroke="#385b49" stroke-width="4"/>
+ <path d="M84 68v16l11 1" fill="none" stroke="#385b49" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+ <text x="11" y="108" fill="#fffdf7" font-family="Georgia,serif" font-size="31" font-weight="700">m.</text>
+</g></svg>
