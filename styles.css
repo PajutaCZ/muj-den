@@ -293,3 +293,22 @@
   .task-item-actions{gap:0;flex-wrap:wrap;max-width:100px}
   .task-item-actions .task-date{font-size:9px;margin-right:4px}
 }
+
+/* Verze 24: kompaktní jednořádkové úkoly a vycentrované zaškrtávátko. */
+.task-list{display:grid;gap:2px}
+.task-item{grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:9px;min-height:40px;padding:4px 0;border:0}
+.task-item>div:nth-child(2){min-width:0;align-self:center}
+.task-title{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.25}
+.task-check{display:grid;place-items:center;justify-self:center;align-self:center;box-sizing:border-box;flex:none;width:19px;height:19px;margin:0;border-width:1.5px}
+.task-check:checked:after{position:absolute;inset:0;display:grid;place-items:center;transform:none;font-size:11px;line-height:1}
+.task-item-actions{display:flex;flex-wrap:nowrap;align-items:center;justify-content:flex-end;gap:2px;max-width:none;white-space:nowrap}
+.task-item-actions .task-date{display:inline-block;margin:0 3px 0 0;font-size:10px;line-height:1.2;vertical-align:middle}
+.task-item-actions .edit-task,.task-item-actions .delete-task{flex:0 0 25px;min-width:25px;width:25px;height:25px}
+.task-note-inline{color:var(--muted);font-weight:400}
+@media(max-width:520px){
+ .task-item{grid-template-columns:20px minmax(0,1fr) auto;gap:6px;min-height:38px;padding:3px 0}
+ .task-title{font-size:12px}
+ .task-item-actions{gap:1px}
+ .task-item-actions .task-date{font-size:9px;margin-right:2px}
+ .task-item-actions .edit-task,.task-item-actions .delete-task{flex-basis:23px;min-width:23px;width:23px;height:23px}
+}
