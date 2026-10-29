@@ -471,3 +471,10 @@
 .water-mood-icon{flex:0 0 46px;width:46px;height:46px;object-fit:cover;border-radius:50%;mix-blend-mode:multiply}
 @media(max-width:600px){.brand-mark{flex-basis:34px;width:34px;height:34px}.water-dose input{width:64px;min-width:64px}.water-mood{width:180px;min-width:180px;gap:7px}.water-mood>div{width:133px;min-height:40px}.water-mood-icon{flex-basis:42px;width:42px;height:42px}}
 @media(max-width:360px){.water-mood{width:172px;min-width:172px}.water-mood>div{width:126px}}
+
+/* Verze 38: sjednocené štítky sekcí a vycentrovaná sklenice. */
+.tasks-card .task-heading-line .tasks-eyebrow{color:var(--muted);font-size:14px}
+.water-heading>.eyebrow,.movement-card .eyebrow,.history-card .eyebrow{color:var(--muted);font-size:11px}
+.water-glass{width:124px;height:124px;max-width:none;object-fit:contain;mix-blend-mode:normal}
+@media(max-width:600px){.tasks-card .task-heading-line .tasks-eyebrow{font-size:13px}.water-glass{width:94px;height:94px}}
+@media(max-width:360px){.water-glass{width:84px;height:84px}}
