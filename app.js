@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const KEY = 'mujDenState', APP_VERSION = 15, $ = s => document.querySelector(s);
+  const KEY = 'mujDenState', APP_VERSION = 16, $ = s => document.querySelector(s);
   async function checkAppVersion(){const status=$('#versionStatus'),button=$('#settingsButton');if(!status||!button)return;try{const response=await fetch(`./version.json?check=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('Kontrola verze se nezdařila');const latest=Number((await response.json()).version);if(!Number.isInteger(latest)||latest<1)throw new Error('Neplatná verze');const update=latest>APP_VERSION;button.classList.toggle('update-available',update);button.setAttribute('aria-label',update?`Nastavení, dostupná verze ${latest}`:'Nastavení');status.classList.toggle('is-update',update);status.classList.toggle('is-current',!update);status.textContent=update?`Je dostupná nová verze ${latest}.`:'Používáš nejnovější verzi.';}catch{button.classList.remove('update-available');button.setAttribute('aria-label','Nastavení');status.classList.remove('is-update','is-current');status.textContent='Aktuálnost nelze ověřit offline.';}}
   const dateKey = (d=new Date()) => { const x=new Date(d); x.setMinutes(x.getMinutes()-x.getTimezoneOffset()); return x.toISOString().slice(0,10); };
   const WEEKDAYS=[{key:'mon',label:'Po',index:1},{key:'tue',label:'Út',index:2},{key:'wed',label:'St',index:3},{key:'thu',label:'Čt',index:4},{key:'fri',label:'Pá',index:5},{key:'sat',label:'So',index:6},{key:'sun',label:'Ne',index:0}];

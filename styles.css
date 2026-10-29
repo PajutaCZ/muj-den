@@ -187,7 +187,7 @@
 
 /* Plan timeline: axis markers share one center line and sit above its connector. */
 .timeline{--plan-axis-gutter:15px;--plan-axis-x:5px;padding-left:var(--plan-axis-gutter)}
-.timeline::before{left:var(--plan-axis-x);z-index:2}
+.timeline::before{left:calc(var(--plan-axis-x) - 1px);z-index:2}
 .plan-row{z-index:3;grid-template-columns:minmax(0,var(--plan-time-width)) minmax(0,1fr) 16px auto;gap:6px;padding:5px 10px}
 .plan-time{font-size:12px}
 .plan-title{grid-column:2;font-size:13px}
