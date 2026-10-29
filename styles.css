@@ -441,3 +441,22 @@
 .install-info p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
 .install-info a{color:var(--green-dark);font-weight:650}
 @media(max-width:600px){.exercise-icon-picker{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.exercise-icon-option{min-height:108px}.picker-pictogram{height:52px}.movement-modal{padding:20px 16px}}
+
+/* Verze 36: čisté vyříznuté piktogramy a sklenice jako ovládací prvky. */
+.water-main{grid-template-columns:minmax(0,1fr) 166px;gap:18px}
+.water-dose-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.water-dose{display:flex;align-items:center;gap:3px;color:var(--ink);font:500 13px var(--sans)}
+.water-dose input{width:54px;height:36px;padding:0 5px;border:1px solid #e4e5dc;border-radius:8px;background:#fffefa;color:var(--ink);text-align:center;font:600 14px var(--sans);font-variant-numeric:tabular-nums}
+.water-dose>span:last-child{color:var(--muted);font-size:12px}
+.water-minus{display:grid;place-items:center;width:38px;height:38px;margin:0;padding:2px;border:1px solid #e7e8e0;border-radius:50%;background:#fffefa;cursor:pointer}
+.water-minus img{width:31px;height:31px;object-fit:contain;mix-blend-mode:multiply}
+.water-add-circle{display:grid;place-items:center;width:166px;height:166px;min-height:0;padding:5px;border:0;border-radius:50%;background:#f0f4f1;cursor:pointer;transition:transform .15s,background .15s}
+.water-add-circle:hover{background:#e9f0eb;transform:scale(1.025)}
+.water-glass{display:block;width:min(138px,100%);height:auto;margin:0;object-fit:contain;mix-blend-mode:multiply}
+.water-mood-icon{display:block;flex:0 0 46px;width:46px;height:46px;object-fit:contain;border-radius:50%;mix-blend-mode:multiply}
+.picker-pictogram,.movement-icon{display:block;object-fit:contain;mix-blend-mode:multiply}
+.picker-pictogram{width:100%;height:62px}
+.movement-icon{flex:0 0 54px;width:54px;height:44px}
+.exercise-icon-option{min-height:128px}
+@media(max-width:600px){.water-main{grid-template-columns:minmax(0,1fr) 116px;gap:10px}.water-add-circle{width:116px;height:116px}.water-glass{width:104px}.water-dose-row{gap:8px}.water-dose input{width:48px;height:34px}.water-mood-icon{flex-basis:40px;width:40px;height:40px}.movement-icon{flex-basis:50px;width:50px}}
+@media(max-width:360px){.water-main{grid-template-columns:minmax(0,1fr) 98px}.water-add-circle{width:98px;height:98px}.water-glass{width:90px}}
