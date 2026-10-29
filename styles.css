@@ -281,3 +281,15 @@
 .update-app-button:hover{background:var(--green-dark)}
 .update-app-button:disabled{opacity:.65;cursor:wait}
 .update-app-button[hidden]{display:none!important}
+
+/* Úkol lze upravit; splněné zůstávají v seznamu, ale mizí z denního plánu. */
+.task-item-actions{display:flex;align-items:center;justify-content:flex-end;gap:3px}
+.task-item-actions .task-date{display:inline-block;margin-right:5px}
+.task-item-actions .edit-task,.task-item-actions .delete-task{display:inline-grid;place-items:center;min-width:27px;height:27px;padding:3px;border:0;border-radius:7px;background:transparent;color:#899087;font:500 14px var(--sans);cursor:pointer;opacity:1}
+.task-item-actions .edit-task:hover{background:#edf0e8;color:var(--green-dark)}
+.task-item-actions .delete-task:hover{background:#f7efec;color:#a7584a}
+@media(max-width:520px){
+  .task-item{grid-template-columns:20px minmax(0,1fr) auto;gap:8px}
+  .task-item-actions{gap:0;flex-wrap:wrap;max-width:100px}
+  .task-item-actions .task-date{font-size:9px;margin-right:4px}
+}
