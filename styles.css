@@ -261,3 +261,17 @@
   .exercise-form input{padding:0 7px}
   .exercise-form .exercise-save{width:39px}
 }
+
+/* Verze 18: záhlaví úkolů v jedné zarovnané řadě. */
+.tasks-card .task-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.task-heading-line{display:flex;align-items:center;gap:9px;min-height:28px}
+.task-heading-line .tasks-eyebrow{margin:0;color:var(--green);font-size:13px;line-height:1.2;letter-spacing:1.3px;font-weight:750}
+.task-heading-line .count{display:inline-grid;place-items:center;min-width:27px;height:27px;margin:0;padding:0 7px;border-radius:50%;background:#edf0e8;color:var(--green-dark);font-size:12px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.tasks-card .task-section-heading .text-button{align-self:center;margin:0;white-space:nowrap}
+@media(max-width:420px){
+  .tasks-card .task-section-heading{gap:8px;margin-bottom:16px}
+  .task-heading-line{gap:7px}
+  .task-heading-line .tasks-eyebrow{font-size:12px}
+  .task-heading-line .count{min-width:25px;height:25px;font-size:11px}
+  .tasks-card .task-section-heading .text-button{font-size:10px}
+}
