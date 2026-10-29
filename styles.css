@@ -316,3 +316,7 @@
 /* Pohodlné ovládání úkolů na dotykových displejích. */
 .task-item-actions .edit-task,.task-item-actions .delete-task{width:36px;min-width:36px;height:36px;padding:0;border-radius:50%;font-size:18px;touch-action:manipulation}
 @media(max-width:520px){.task-item-actions{max-width:136px;flex-wrap:nowrap;gap:2px}.task-item-actions .task-date{margin-right:2px}}
+
+/* Hotové úkoly: čitelnější termín a pohodlně dosažitelná tužka. */
+.task-item.done .task-item-actions .task-date{font-size:13px}
+.task-item-actions .edit-task{transform:translateX(2px)}
