@@ -340,3 +340,70 @@
 .movement-card{order:2;grid-column:1/-1}
 .history-card{order:3}
 .quote-card{order:4;grid-column:1/-1}
+
+/* Pitný režim podle přiloženého návrhu. */
+.water-card{padding:22px 26px}
+.water-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.water-heading .eyebrow{margin:0}
+.water-mood{display:flex;align-items:center;gap:9px;color:var(--green-dark)}
+.water-mood>span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#f7e8c8;font-size:22px}
+.water-mood div{display:grid;gap:2px}
+.water-mood strong{font-size:14px}
+.water-mood small{color:var(--muted);font-size:12px}
+.water-main{display:grid;grid-template-columns:minmax(0,1fr) 166px;align-items:center;gap:18px}
+.water-info{min-width:0}
+.water-total{display:flex;align-items:baseline;gap:8px;margin:0 0 14px;white-space:nowrap}
+.water-total strong{color:var(--green-dark);font-size:32px;font-weight:750;font-variant-numeric:tabular-nums}
+.water-goal{color:var(--muted);font-size:18px}
+.water-main .progress-track{height:14px;margin:0;border-radius:999px;background:#ecece7}
+.water-main .progress-track span{border-radius:999px;background:#77a4b2}
+.water-meter-label{display:flex;justify-content:space-between;align-items:center;margin-top:8px;color:var(--muted);font-size:14px}
+.water-meter-label strong{color:var(--green-dark);font-size:14px}
+.water-minus{margin-top:10px;padding:4px 0;border:0;background:transparent;color:var(--muted);font:500 12px var(--sans);cursor:pointer}
+.water-add-circle{width:166px;height:166px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;background:#f0f4f1;color:var(--green-dark)}
+.water-glass{width:88px;height:88px;margin-top:2px}
+.water-drop-icon{fill:#4c9cb6}
+.glass-water{fill:#82b4c7;transition:d .2s}
+.glass-outline{fill:none;stroke:#557468;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.water-add-button{padding:1px 0;border:0;background:transparent;color:var(--green-dark);font:600 14px var(--sans);cursor:pointer}
+.water-dose{display:flex;align-items:center;gap:2px;color:var(--ink);font:500 12px var(--sans)}
+.water-dose input{width:34px;padding:0;border:0;background:transparent;color:inherit;text-align:right;font:600 12px var(--sans);font-variant-numeric:tabular-nums}
+.water-dose input:focus{outline:1px solid #aabbb0;border-radius:4px}
+.water-minus:hover,.water-add-button:hover{color:var(--green)}
+.movement-heading-right{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;white-space:nowrap}
+.movement-heading-right span{font-variant-numeric:tabular-nums}
+.movement-card .movement-list{grid-template-columns:1fr;gap:8px}
+.movement-item{display:grid;grid-template-columns:34px 76px minmax(0,1fr) 18px;gap:10px;min-height:72px;padding:10px 14px;border-radius:14px}
+.movement-item input{width:23px;height:23px;flex-basis:23px}
+.movement-item input:checked::after{font-size:14px;line-height:20px}
+.movement-icon{width:68px;height:48px;overflow:visible;fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.movement-icon circle{fill:var(--green)}
+.movement-copy{display:grid;gap:2px}
+.movement-copy strong{font-size:16px}
+.movement-copy small{color:var(--muted);font-size:12px}
+.movement-arrow{color:#626b62;font-size:27px;line-height:1}
+.footer-owner{display:block;margin-top:9px;color:#81877e;font-size:10px}
+.owner-note{margin:20px 0 0;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:520px){
+ .water-card{padding:18px}
+ .water-heading{align-items:flex-start;margin-bottom:10px}
+ .water-mood{gap:7px}
+ .water-mood>span{width:34px;height:34px;font-size:18px}
+ .water-mood strong{font-size:12px}
+ .water-mood small{font-size:10px}
+ .water-main{grid-template-columns:minmax(0,1fr) 126px;gap:8px}
+ .water-total{gap:5px;margin-bottom:10px}
+ .water-total strong{font-size:25px}
+ .water-goal{font-size:14px}
+ .water-main .progress-track{height:12px}
+ .water-meter-label{font-size:12px}
+ .water-add-circle{width:126px;height:126px}
+ .water-glass{width:65px;height:65px}
+ .water-add-button{font-size:12px}
+ .water-dose,.water-dose input{font-size:11px}
+ .movement-item{grid-template-columns:30px 60px minmax(0,1fr) 16px;gap:7px;min-height:66px;padding:8px 10px}
+ .movement-icon{width:56px;height:42px}
+ .movement-copy strong{font-size:14px}
+ .movement-copy small{font-size:11px}
+}
+@media(max-width:360px){.water-main{grid-template-columns:minmax(0,1fr) 104px}.water-add-circle{width:104px;height:104px}.water-glass{width:54px;height:54px}.water-total strong{font-size:22px}.water-goal{font-size:12px}}
